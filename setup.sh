@@ -1,8 +1,12 @@
 #! /bin/bash
 sudo apt-get install bluez bluez-tools -y
-sudo apt-get install bluez-firmware python-bluez python-dev python-pip -y
+# sudo apt-get install bluez-firmware python-bluez python-dev python-pip -y
+sudo apt-get install bluez-firmware python-bluez -y
+sudo apt install python-dev python3-dev -y
+# python3-evdev non trovato
 sudo pip install evdev
-sudo apt install git python python3 python-dev python3-dev python3-dbus python3-pyudev python3-evdev -y
+sudo apt install python3-dbus python3-pyudev -y
+# sudo apt install git python python3 python-dev python3-dev python3-dbus python3-pyudev python3-evdev -y
 sudo apt-get install python-dbus  -y
 sudo apt-get install tmux -y
 sudo cp dbus/org.thanhle.btkbservice.conf /etc/dbus-1/system.d
