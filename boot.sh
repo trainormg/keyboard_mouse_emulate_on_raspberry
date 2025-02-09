@@ -19,11 +19,17 @@ setupApplication()
     tmux send-keys -t thanhle:pi_bluetooth.2 'cd $C_PATH/keyboard  && reset ' C-m
 }
 
-STATUS=$(tmux ls 2>&1)
+if STATUS=$(tmux ls 2>&1); then
+	retval=0
+else
+	retval=1
+fi
 
 echo "STATUS: ${STATUS}"
 
-if [ "${STATUS}" = "no server running on /tmp/tmux-1000/default" ] ; then
+
+#if [ "${STATUS}" = "no server running on /tmp/tmux-1000/default" ] ; then
+if [ $retval -ne 0 ] ; then
     echo "no tmux instance"
     setupApplication
 else

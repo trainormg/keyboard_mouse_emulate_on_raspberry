@@ -23,7 +23,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 class BTKbDevice():
     # change these constants
-    MY_ADDRESS = "E4:A7:A0:E0:0E:97"
+    MY_ADDRESS = "B8:27:EB:43:2A:AE"
     MY_DEV_NAME = "ThanhLe_Keyboard_Mouse"
 
     # define some constants
